@@ -1,0 +1,18 @@
+.DS_Store
+node_modules/
+_node_modules/
+singleProduct/
+/dist/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.lograr
+*.rar
+*.zip
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln

@@ -1,0 +1,58 @@
+@import './media.less';
+@import './mixins.less';
+
+/* 设备 title 栏高度 */
+@titHeight: 68px;
+
+/* 去除默认样式 */
+ul, li, body, p {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* 基本样式 */
+html, body {
+    height: 100%;
+}
+
+body {
+    overflow: hidden;
+    /* 禁止用户选取文本 */
+   -moz-user-select: none; /*火狐*/
+   -webkit-user-select: none; /*webkit览器*/
+   -ms-user-select: none; /*IE10*/
+   user-select: none;
+
+   -webkit-tap-highlight-color: transparent;
+}
+
+/* 测试用 */
+h1.txt {
+    display: none;
+    .setPosition();
+    z-index: 100;
+}
+
+/* 辅助类 */
+.clearfix::before,
+.clearfix::after {
+    content: "";
+    display: block;
+    height: 0;
+    font-size: 0;
+    overflow: hidden;
+    clear: both;
+}
+
+.device-title {
+    width: 100%;
+    height: @titHeight;
+}

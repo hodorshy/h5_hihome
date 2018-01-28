@@ -1,0 +1,56 @@
+
+
+@bottomHeight: 140px;           // 底部高度
+@titHeight: 68px;               // native title栏固定高度
+
+
+/* 定位 */
+.setPosition(@positon: absolute, @top: 0, @left: 0) {
+    position: @positon;
+    top: @top;
+    left: @left;
+}
+
+/* margin + transform 居中 */
+.setCenterUseTransform() {
+    margin-top: 50%;
+    margin-left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+}
+
+/* position 居中 */
+.setCenterUsePosition() {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+/* 设置宽高 */
+.setWH( @width: 100%, @height: 100% ){
+    width: @width;
+    height: @height;
+}
+
+/* flex 居中 */
+.setCenterUseFlex() {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 图片居中 */
+.setBgi() {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* 设置 native title */
+.setTitForNative() {
+    box-sizing: border-box;
+    padding-top: @titHeight;
+}
